@@ -1,0 +1,114 @@
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by cba (cba) 
+
+eikon_key="7e13bd6f2ec24ff8b6090ef4599174d4a68b8075"
+-->
+<global_market_config 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="cfg.xsd" 
+                 eikon_key="1361994804e241539daa38ddec1ae67861ff7de5"
+		holiday_file="D:\predator-eagle\global_market\ref\ccy_holiday.csv">
+		
+	<country id="CN" enable="true" timezone="Asia/Shanghai" ccy="CNY">
+		<exchange
+		id="CCFX"
+		port="6000"
+		enable="true"
+		vola_high="10" 
+		vola_low="10" 
+		open_time_am="09:45:00" 
+		close_time_am="14:45:00"
+		open_time_pm="13:15:00" 
+		close_time_pm="15:20:00"
+		instruments_file="D:\predator-eagle\global_market\ref\instruments\cn-ccfx-instrument-list.csv"
+		day_file_path="D:\predator-eagle\global_market\data\dayfile\cn\ccfx\"
+		tick_file_path="D:\predator-eagle\global_market\data\tick\cn\ccfx\"
+		hist_file_path="D:\predator-eagle\global_market\data\hist\cn\ccfx\"
+		hist_day_file_path="D:\predator-eagle\global_market\data\hist_day\cn\ccfx\"
+		adj_factor_file="D:\predator-eagle\global_market\ref\factor\uqer_adj.csv" >
+			<chains>	
+				<chain value ="0#CIH:"/>
+				<chain value ="0#CIC:"/>
+				<chain value ="0#CIF:"/>
+			</chains>
+		</exchange>
+		
+		<exchange
+		id="XSHG"
+		port="5559"
+		enable="true"
+		using_index="false"
+		index='.CSI500'
+		vola_high="10"
+		vola_low="10"
+		open_time_am="09:45:00"
+		close_time_am="11:45:00"
+		open_time_pm="13:15:00"
+		close_time_pm="15:20:00"
+		instruments_file="D:\predator-eagle\global_market\ref\instruments\cn-xshg-instrument-list.csv"
+		day_file_path="D:\predator-eagle\global_market\data\dayfile\cn\xshg\"
+		tick_file_path="D:\predator-eagle\global_market\data\tick\cn\xshg\"
+		hist_file_path="D:\predator-eagle\global_market\data\hist\cn\xshg\"
+		hist_day_file_path="D:\predator-eagle\global_market\data\hist_day\cn\xshg\"
+		adj_factor_file="D:\predator-eagle\global_market\ref\factor\uqer_adj.csv" />
+
+		<exchange id="XSHE"
+		port="5558"
+		enable="true" 
+		vola_high="10" 
+		vola_low="10"
+		using_index="false"
+		index='.CSI300'
+		open_time_am="09:45:00" 
+		close_time_am="11:45:00" 
+		open_time_pm="13:15:00" 
+		close_time_pm="15:20:00"
+		instruments_file="D:\predator-eagle\global_market\ref\instruments\cn-xshe-instrument-list.csv"
+		day_file_path="D:\predator-eagle\global_market\data\dayfile\cn\xshe\"
+		tick_file_path="D:\predator-eagle\global_market\data\tick\cn\xshe\"
+		hist_file_path="D:\predator-eagle\global_market\data\hist\cn\xshe\"
+		hist_day_file_path="D:\predator-eagle\global_market\data\hist_day\cn\xshe\"
+		adj_factor_file="D:\predator-eagle\global_market\ref\factor\uqer_adj.csv"/>
+		
+		<exchange id="XHKG"
+		port="5557"
+		enable="true" 
+		using_index="true" 
+		index='.HSI'
+		vola_high="10" 
+		vola_low="10" 
+		open_time_am="09:45:00" 
+		close_time_am="12:15:00"
+		open_time_pm="13:15:00" 
+		close_time_pm="16:20:00"
+		instruments_file="D:\predator-eagle\global_market\ref\instruments\cn-xhkg-instrument-list.csv"
+		day_file_path="D:\predator-eagle\global_market\data\dayfile\cn\xhkg\"
+		tick_file_path="D:\predator-eagle\global_market\data\tick\cn\xhkg\"
+		hist_file_path="D:\predator-eagle\global_market\data\hist\cn\xhkg\"
+		hist_day_file_path="D:\predator-eagle\global_market\data\hist_day\cn\xhkg\"
+		adj_factor_file="D:\predator-eagle\global_market\ref\factor\xhkg_tr_adj.csv"
+		ccy="HKD"/>
+			 
+	</country>
+	<country id="US" enable="true" timezone="America/New_York" ccy="USD"> 
+	<!--no lunch break-->
+		<exchange 
+		id="XNYS" 
+		using_index="true" 
+		index='.SPX'
+		port="5556"
+		enable="true" 
+		vola_high="10" 
+		vola_low="10" 
+		open_time_am="09:45:00" 
+		close_time_am="13:45:00" 
+		open_time_pm="13:15:00" 
+		close_time_pm="16:20:00"
+		instruments_file="D:\predator-eagle\global_market\ref\instruments\us-xnys-instrument-list.csv"
+		day_file_path="D:\predator-eagle\global_market\data\dayfile\us\xnys\"
+		tick_file_path="D:\predator-eagle\global_market\data\tick\us\xnys\"
+		hist_file_path="D:\predator-eagle\global_market\data\hist\us\xnys\"
+		hist_day_file_path="D:\predator-eagle\global_market\data\hist_day\us\xnys\"
+		adj_factor_file="D:\predator-eagle\global_market\ref\factor\xnys_tr_adj.csv" />
+	</country>
+	</global_market_config>
+
