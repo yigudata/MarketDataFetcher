@@ -114,10 +114,21 @@ class DayFileService:
                                 row['LOW'] * accumAdj,
                                 row['CLOSE'] * accumAdj
                                 )
+        # if (date == 20190110):
+        #     with open(filename, "ab") as fhw:
+        #         file_size = fhw.tell()
+        #         fhw.seek(file_size - struct_len)
+        #         position = fhw.tell()
+        #         fhw.truncate(position)
+        #         fhw.write(pack_data)
+        #         fhw.flush()
+        #         fhw.close()
+        # else:
         with open(filename, "ab") as fhw:
-            fhw.write(pack_data)
-            fhw.flush()
-            fhw.close()
+                fhw.write(pack_data)
+                fhw.flush()
+                fhw.close()
+
     pass
     def hist_appendfile(self, to_dir, ric, row):
         filename = self.getfilename(to_dir, ric)

@@ -26,7 +26,7 @@ class HistoricalDataService:
             try:
                 today = datetime.now()
                 #start = datetime.strptime(row['First Trade Date'], const.date_fmt)
-                start = datetime.strptime('2006-01-04', const.date_fmt)
+                start = datetime.strptime('2018-11-29', const.date_fmt)
                 end = None
                 values = []
                 while True:
@@ -57,7 +57,7 @@ class HistoricalDataService:
         for index, row in ric_df.iterrows():
             self.fetch_hist_data(row)
             self.logger.info('done for %s', row['Instrument'])
-            time.sleep(3)
+            time.sleep(1)
         pass
         self.logger.info('all done')
     pass

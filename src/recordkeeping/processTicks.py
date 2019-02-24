@@ -69,7 +69,7 @@ def write_ticks(excode):
             continue
         elif now > close_pm:
             logger.info(const.exchange_close_text)
-            time.sleep(const.interval * 5)  # wait for 5 mins
+            #time.sleep(const.interval * 5)  # wait for 5 mins
             read_from_tea(tick_file_path, day_file_path) # last read
             raise SystemExit(0)
         pass
@@ -81,3 +81,6 @@ def write_ticks(excode):
             logger.error(excp, exc_info=True)
             time.sleep(const.interval*5) #5 mins
     pass
+if __name__ == '__main__':
+    excode='XSHG'
+    write_ticks(excode)

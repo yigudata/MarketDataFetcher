@@ -3,6 +3,7 @@ from datetime import datetime
 from util import const
 import time
 import pytz
+import pandas as pd
 
 
 def fitem(item):
@@ -70,6 +71,19 @@ def get_now(timezone):
 def get_today(timezone):
     return datetime.now(timezone).strftime(const.date_fmt)
     pass
+
+def is_today_holiday(ccy,tz):
+    today = datetime.now(tz)
+    if today.isoweekday() > 5:
+        return True
+    holiday_file = r"D:\predator-eagle\global_market\ref\ccy_holiday.csv"
+    today_str = today.strftime(const.date_fmt)
+    holiday_df = pd.read_csv(holiday_file)
+
+    holiday_df = holiday_df[holiday_df.CCY.isin([ccy, ''])]
+    holiday_df = holiday_df[holiday_df.DT.isin([today_str, ''])]
+
+    return (not holiday_df.empty)
 
 if __name__ == "__main__":
     #filename = r'D:\predator-eagle\global_market\ref\instruments\bak\us-xnys-instrument-list1.csv'
